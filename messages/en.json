@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Home",
+    "capabilities": "Services",
+    "clients": "Clients",
+    "about": "About",
+    "language": "Language"
+  },
+  "hero": {
+    "title": "Goodbye routine. Hello AI automation.",
+    "subtitle": "We build intelligent AI voice agents, chatbots, and automation systems for your business.",
+    "tryVoice": "Try Voice AI",
+    "telegram": "Write in Telegram"
+  },
+  "voice": {
+    "startConversation": "Start Conversation",
+    "listening": "Listening...",
+    "thinking": "Thinking...",
+    "speaking": "Speaking...",
+    "idle": "Press to start",
+    "close": "Close",
+    "micPermission": "Microphone access is required"
+  },
+  "capabilities": {
+    "title": "What We Build",
+    "voiceCalls": {
+      "title": "AI Voice Calls",
+      "description": "AI agents that handle inbound and outbound calls 24/7 — answering, booking, and qualifying leads"
+    },
+    "whatsapp": {
+      "title": "WhatsApp Bots",
+      "description": "Smart WhatsApp assistants that respond to clients instantly, around the clock"
+    },
+    "facebook": {
+      "title": "Facebook Responders",
+      "description": "Automated Facebook Messenger bots that engage leads and handle customer support"
+    },
+    "instagram": {
+      "title": "Instagram Responders",
+      "description": "AI that replies to DMs and comments on Instagram, converting followers into clients"
+    },
+    "booking": {
+      "title": "Booking Automation",
+      "description": "Automatic appointment scheduling and calendar management integrated with your systems"
+    },
+    "telegram": {
+      "title": "Telegram AI Bots",
+      "description": "Powerful Telegram bots for client communication, sales, and support automation"
+    }
+  },
+  "process": {
+    "label": "How It Works",
+    "title": "From your problem to automation",
+    "titleHighlight": "in 2 weeks",
+    "step1Number": "01",
+    "step1Title": "Tell Us Your Problem",
+    "step1Description": "You explain what is hurting your business. Hundreds of unanswered calls, thousands of messages piling up, repetitive tasks draining your team. We listen and understand.",
+    "step2Number": "02",
+    "step2Title": "We Build It In 2 Weeks. Free.",
+    "step2Description": "Based on your situation, we design and build your custom AI solution in 2 weeks. The first month is completely free. No commitment, no payment. Just results.",
+    "step3Number": "03",
+    "step3Title": "Love It? Keep It.",
+    "step3Description": "After your free month, if the AI is working for you, we move to a simple monthly subscription. No pressure. Only if it genuinely solves your problem."
+  },
+  "clients": {
+    "title": "Our Clients",
+    "viewCase": "View Case"
+  },
+  "about": {
+    "title": "New Generation of Automation",
+    "text": "Adios was built by a young digital team obsessed with AI. We found a way to make automation simple, fast, and actually work for real businesses without the complexity or the corporate nonsense."
+  },
+  "cta": {
+    "title": "Ready to automate?",
+    "button": "Discuss Your Project"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "telegram": "Telegram"
+  }
+}

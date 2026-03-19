@@ -1,0 +1,81 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "capabilities": "Services",
+    "clients": "Clients",
+    "about": "À propos",
+    "language": "Langue"
+  },
+  "hero": {
+    "title": "Adieu la routine. Bonjour l'automatisation IA.",
+    "subtitle": "Nous construisons des agents vocaux IA, des chatbots et des systèmes d'automatisation pour votre entreprise.",
+    "tryVoice": "Essayer Voice AI",
+    "telegram": "Écrire sur Telegram"
+  },
+  "voice": {
+    "startConversation": "Démarrer la conversation",
+    "listening": "J'écoute...",
+    "thinking": "Je réfléchis...",
+    "speaking": "Je parle...",
+    "idle": "Appuyez pour commencer",
+    "close": "Fermer",
+    "micPermission": "Accès au microphone requis"
+  },
+  "capabilities": {
+    "title": "Ce Que Nous Construisons",
+    "voiceCalls": {
+      "title": "Appels Vocaux IA",
+      "description": "Des agents IA qui gèrent les appels entrants et sortants 24h/24 — réponse, réservation, qualification des leads"
+    },
+    "whatsapp": {
+      "title": "Bots WhatsApp",
+      "description": "Des assistants WhatsApp intelligents qui répondent instantanément aux clients, en permanence"
+    },
+    "facebook": {
+      "title": "Répondeurs Facebook",
+      "description": "Des bots Facebook Messenger automatisés qui engagent les leads et gèrent le support client"
+    },
+    "instagram": {
+      "title": "Répondeurs Instagram",
+      "description": "IA qui répond aux DM et commentaires Instagram, convertissant les abonnés en clients"
+    },
+    "booking": {
+      "title": "Automatisation des Réservations",
+      "description": "Planification automatique des rendez-vous et gestion du calendrier intégrées à vos systèmes"
+    },
+    "telegram": {
+      "title": "Bots Telegram IA",
+      "description": "Des bots Telegram puissants pour la communication client, les ventes et l'automatisation du support"
+    }
+  },
+  "process": {
+    "label": "Comment Ça Marche",
+    "title": "De votre problème à l'automatisation",
+    "titleHighlight": "en 2 semaines",
+    "step1Number": "01",
+    "step1Title": "Parlez-Nous De Votre Problème",
+    "step1Description": "Vous nous expliquez ce qui fait mal dans votre business. Des centaines d'appels sans réponse, des milliers de messages qui s'accumulent, des tâches répétitives qui épuisent votre équipe. Nous écoutons.",
+    "step2Number": "02",
+    "step2Title": "Nous Le Construisons En 2 Semaines. Gratuit.",
+    "step2Description": "En fonction de votre situation, nous concevons et construisons votre solution IA sur mesure en 2 semaines. Le premier mois est entièrement gratuit. Sans engagement, sans paiement. Juste des résultats.",
+    "step3Number": "03",
+    "step3Title": "Vous Aimez ? Gardez-Le.",
+    "step3Description": "Après votre mois gratuit, si l'IA fonctionne pour vous, nous passons à un simple abonnement mensuel. Sans pression. Seulement si cela résout vraiment votre problème."
+  },
+  "clients": {
+    "title": "Nos Clients",
+    "viewCase": "Voir le cas"
+  },
+  "about": {
+    "title": "Nouvelle Génération d'Automatisation",
+    "text": "Adios a été créé par une jeune équipe digitale passionnée d'IA. Nous avons trouvé un moyen de rendre l'automatisation simple, rapide et vraiment efficace pour les vraies entreprises, sans complexité ni bureaucratie."
+  },
+  "cta": {
+    "title": "Prêt à automatiser ?",
+    "button": "Discuter du projet"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "telegram": "Telegram"
+  }
+}
