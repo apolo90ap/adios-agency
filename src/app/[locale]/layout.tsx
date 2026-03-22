@@ -62,6 +62,9 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} dir={dir}>
+      <head>
+        <link rel="icon" href="/adios-favicon.png?v=3" type="image/png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pacifico.variable} font-sans antialiased bg-dark text-white`}
       >
