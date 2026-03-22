@@ -66,15 +66,23 @@ export class AriaVoiceService implements VoiceService {
         if (!this.isRunning) { stream.getTracks().forEach((t) => t.stop()); return; }
         this.stream = stream;
         this.setupVAD(stream);
-        // Greeting is likely already fetched by now — play immediately
-        const buffer = await greetingFetch;
-        if (this.isRunning) await this.playBuffer(buffer, () => {
+        // Try to play greeting, if TTS fails — just start listening
+        try {
+          const buffer = await greetingFetch;
+          if (this.isRunning) await this.playBuffer(buffer, () => {
+            this.isSpeaking = false;
+            if (this.isRunning) {
+              this.callbacks?.onStateChange(VoiceState.LISTENING);
+              this.startListening();
+            }
+          });
+        } catch {
           this.isSpeaking = false;
           if (this.isRunning) {
             this.callbacks?.onStateChange(VoiceState.LISTENING);
             this.startListening();
           }
-        });
+        }
       })
       .catch((err) => {
         callbacks.onError("Microphone access denied: " + err.message);
