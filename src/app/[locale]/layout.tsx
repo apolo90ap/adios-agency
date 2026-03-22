@@ -31,8 +31,13 @@ export const metadata: Metadata = {
   description:
     "We create intelligent voice and automated AI solutions for business. Voice AI, Telegram bots, booking automation.",
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
+    icon: [
+      { url: "/adios-icon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/adios-icon-64.png", sizes: "64x64", type: "image/png" },
+      { url: "/adios-icon-128.png", sizes: "128x128", type: "image/png" },
+    ],
+    shortcut: "/adios-icon-32.png",
+    apple: "/adios-icon-128.png",
   },
   openGraph: {
     title: "Adios Agency — AI Automation for Business",
