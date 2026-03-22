@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   title: "Adios Agency — AI Automation for Business",
   description:
     "We create intelligent voice and automated AI solutions for business. Voice AI, Telegram bots, booking automation.",
+  icons: {
+    icon: "/adios-favicon.png",
+  },
   openGraph: {
     title: "Adios Agency — AI Automation for Business",
     description:
