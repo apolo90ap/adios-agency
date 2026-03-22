@@ -77,11 +77,9 @@ export class AriaVoiceService implements VoiceService {
             }
           });
         } catch {
-          this.isSpeaking = false;
-          if (this.isRunning) {
-            this.callbacks?.onStateChange(VoiceState.LISTENING);
-            this.startListening();
-          }
+          // Deepgram TTS failed — use browser speech for greeting
+          this.isSpeaking = true;
+          this.speakViaBrowser(GREETING);
         }
       })
       .catch((err) => {
@@ -293,13 +291,39 @@ export class AriaVoiceService implements VoiceService {
         }
       });
     } catch (err) {
-      console.warn("TTS error:", err);
+      console.warn("TTS API failed, using browser speech:", err);
+      this.speakViaBrowser(text);
+    }
+  }
+
+  private speakViaBrowser(text: string): void {
+    if (!("speechSynthesis" in window)) {
       this.isSpeaking = false;
       if (this.isRunning) {
         this.callbacks?.onStateChange(VoiceState.LISTENING);
         this.startListening();
       }
+      return;
     }
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 1.0;
+    utterance.pitch = 1.0;
+    utterance.onend = () => {
+      this.isSpeaking = false;
+      if (this.isRunning) {
+        this.callbacks?.onStateChange(VoiceState.LISTENING);
+        this.startListening();
+      }
+    };
+    utterance.onerror = () => {
+      this.isSpeaking = false;
+      if (this.isRunning) {
+        this.callbacks?.onStateChange(VoiceState.LISTENING);
+        this.startListening();
+      }
+    };
+    window.speechSynthesis.speak(utterance);
   }
 
   private async playBuffer(buffer: ArrayBuffer, onEnded: () => void): Promise<void> {
