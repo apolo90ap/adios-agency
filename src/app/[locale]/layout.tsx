@@ -32,10 +32,15 @@ export const metadata: Metadata = {
     "Adios Agency builds AI agents, AI automation, chatbots, voice AI assistants, Telegram bots, WhatsApp bots and Instagram automation for businesses worldwide. AI автоматизация для бизнеса. סוכני AI לעסקים.",
   keywords: [
     "AI agents", "AI automation", "AI chatbot", "voice AI", "Telegram bot", "WhatsApp bot",
-    "Instagram automation", "business automation", "AI agency", "chatbot development",
+    "Instagram automation", "Facebook automation", "business automation", "AI agency",
+    "chatbot development", "AI assistant", "AI agent for business", "automation agency",
+    "voice assistant AI", "lead generation bot", "AI bot", "conversational AI",
     "AI автоматизация", "ИИ агенты", "чат-бот для бизнеса", "голосовой ИИ",
-    "סוכני בינה מלאכותית", "אוטומציה לעסקים",
-    "agentes de IA", "automatización con IA", "chatbot empresarial",
+    "автоматизация бизнеса", "телеграм бот", "WhatsApp бот", "агентство автоматизации",
+    "סוכני בינה מלאכותית", "אוטומציה לעסקים", "צ'אטבוט לעסקים", "בינה מלאכותית",
+    "agentes de IA", "automatización con IA", "chatbot empresarial", "agencia de IA",
+    "agents IA", "automatisation IA", "chatbot IA", "assistant vocal IA",
+    "agence automatisation", "bot Telegram", "bot WhatsApp", "IA pour les entreprises",
   ],
   icons: {
     icon: "/adios-favicon.png",
