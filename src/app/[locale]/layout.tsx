@@ -29,7 +29,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Adios Agency — AI Agents & Automation for Business",
   description:
-    "Adios Agency builds AI agents, AI automation, chatbots, voice AI assistants, Telegram bots, WhatsApp bots and Instagram automation for businesses worldwide. AI автоматизация для бизнеса. סוכני AI לעסקים.",
+    "Adios Agency builds AI agents, AI automation, chatbots, voice AI assistants, Telegram bots, WhatsApp bots, Instagram and Facebook automation for businesses worldwide. Save time, generate leads 24/7, automate customer support. AI автоматизация для бизнеса — чат-боты, голосовой ИИ, лидогенерация. סוכני AI לעסקים — אוטומציה, צ'אטבוטים. Agents IA pour les entreprises — automatisation, chatbots.",
   keywords: [
     "AI agents", "AI automation", "AI chatbot", "voice AI", "Telegram bot", "WhatsApp bot",
     "Instagram automation", "Facebook automation", "business automation", "AI agency",
@@ -41,6 +41,13 @@ export const metadata: Metadata = {
     "agentes de IA", "automatización con IA", "chatbot empresarial", "agencia de IA",
     "agents IA", "automatisation IA", "chatbot IA", "assistant vocal IA",
     "agence automatisation", "bot Telegram", "bot WhatsApp", "IA pour les entreprises",
+    "KI Automatisierung", "KI Agent", "Chatbot erstellen", "WhatsApp Bot",
+    "automazione AI", "agenti AI", "chatbot aziendale", "assistente vocale AI",
+    "AI 自动化", "人工智能客服", "聊天机器人", "语音AI助手",
+    "AI оператор", "автоматический ответ", "нейросеть для бизнеса", "ИИ чат бот",
+    "AI automation services", "hire AI developer", "build chatbot", "AI for small business",
+    "automate customer support", "AI lead generation", "24/7 AI assistant",
+    "no-code AI bot", "AI sales bot", "AI receptionist", "AI phone bot",
   ],
   icons: {
     icon: "/adios-favicon.png",
