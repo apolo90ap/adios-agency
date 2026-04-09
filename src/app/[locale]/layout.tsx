@@ -27,18 +27,25 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Adios Agency — AI Automation for Business",
+  title: "Adios Agency — AI Agents & Automation for Business",
   description:
-    "We create intelligent voice and automated AI solutions for business. Voice AI, Telegram bots, booking automation.",
+    "Adios Agency builds AI agents, AI automation, chatbots, voice AI assistants, Telegram bots, WhatsApp bots and Instagram automation for businesses worldwide. AI автоматизация для бизнеса. סוכני AI לעסקים.",
+  keywords: [
+    "AI agents", "AI automation", "AI chatbot", "voice AI", "Telegram bot", "WhatsApp bot",
+    "Instagram automation", "business automation", "AI agency", "chatbot development",
+    "AI автоматизация", "ИИ агенты", "чат-бот для бизнеса", "голосовой ИИ",
+    "סוכני בינה מלאכותית", "אוטומציה לעסקים",
+    "agentes de IA", "automatización con IA", "chatbot empresarial",
+  ],
   icons: {
     icon: "/adios-favicon.png",
   },
   openGraph: {
-    title: "Adios Agency — AI Automation for Business",
+    title: "Adios Agency — AI Agents & Automation for Business",
     description:
-      "Intelligent voice and automated AI solutions for business.",
+      "AI agents, chatbots, voice AI and automation solutions for businesses worldwide.",
     type: "website",
-    url: "https://adosagency.com",
+    url: "https://adiosagency.com",
   },
 };
 
