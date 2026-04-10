@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 
 const TELEGRAM_URL = "https://t.me/adiosagency_bot";
 const WHATSAPP_URL = "https://wa.me/972559346070";
-const EMAIL = "adios.agency.office@gmail.com";
+const EMAIL = "adios.agency.official@gmail.com";
 
 export default function Footer() {
   const t = useTranslations("footer");
