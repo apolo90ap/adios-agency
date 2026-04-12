@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const clients = [
   {
     id: "plugin",
-    name: "Plugin Agency",
+    name: null,
     logo: (
       <svg viewBox="0 0 100 100" className="w-16 h-16" fill="none">
         <circle cx="50" cy="50" r="44" stroke="#00FF41" strokeWidth="4" strokeDasharray="220 60" strokeLinecap="round"/>
