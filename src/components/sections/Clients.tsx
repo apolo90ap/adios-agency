@@ -21,14 +21,14 @@ const clients = [
   },
   {
     id: "fershman",
-    name: "The Fershman Journal",
+    name: null,
     logo: (
-      <div className="flex items-center gap-2">
-        <span style={{ fontFamily: "Georgia, serif", fontSize: "2.5rem", fontWeight: "bold", color: "#1a6b4a", lineHeight: 1 }}>F</span>
-        <div style={{ lineHeight: 1.2 }}>
-          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.65rem", color: "#2d2d2d", fontWeight: "400" }}>The</div>
-          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.65rem", color: "#2d2d2d", fontWeight: "700" }}>Fershman</div>
-          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.65rem", color: "#2d2d2d", fontWeight: "700" }}>Journal</div>
+      <div className="flex items-center gap-3">
+        <span style={{ fontFamily: "Georgia, serif", fontSize: "3.5rem", fontWeight: "bold", color: "#1a6b4a", lineHeight: 1 }}>F</span>
+        <div style={{ lineHeight: 1.3 }}>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.85rem", color: "#c8c8b4", fontWeight: "400" }}>The</div>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.85rem", color: "#c8c8b4", fontWeight: "700" }}>Fershman</div>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.85rem", color: "#c8c8b4", fontWeight: "700" }}>Journal</div>
         </div>
       </div>
     ),
