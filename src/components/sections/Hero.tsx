@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useMemo, useEffect, useState } from "react";
 
-const TELEGRAM_URL = "https://t.me/adiosagency_bot";
+const TELEGRAM_URL = "https://t.me/Adiosagency";
 const WHATSAPP_URL = "https://wa.me/972559346070";
 
 interface HeroProps {

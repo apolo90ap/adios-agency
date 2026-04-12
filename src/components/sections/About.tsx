@@ -3,7 +3,7 @@
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
-const TELEGRAM_URL = "https://t.me/adiosagency_bot";
+const TELEGRAM_URL = "https://t.me/Adiosagency";
 
 export default function About() {
   const t = useTranslations("about");
