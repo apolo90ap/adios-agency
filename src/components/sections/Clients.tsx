@@ -1,102 +1,58 @@
 "use client";
 
-import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { motion, AnimatePresence } from "framer-motion";
-import { clients, type Client } from "@/data/clients";
+import { motion } from "framer-motion";
 
-function ClientLogo({
-  client,
-  onClick,
-}: {
-  client: Client;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      onClick={onClick}
-      className="flex-shrink-0 w-32 h-32 mx-4 glass rounded-2xl flex flex-col items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:scale-110 hover:border-primary/30"
-    >
-      <span
-        className="text-2xl font-bold"
-        style={{
-          background: "linear-gradient(135deg, #FF2A1F 0%, #FF5A2F 100%)",
-          WebkitBackgroundClip: "text",
-          WebkitTextFillColor: "transparent",
-        }}
-      >
-        {client.logo}
-      </span>
-      <span className="text-xs text-gray-500 text-center px-2">
-        {client.name}
-      </span>
-    </button>
-  );
-}
-
-function ClientModal({
-  client,
-  onClose,
-}: {
-  client: Client;
-  onClose: () => void;
-}) {
-  return (
-    <motion.div
-      className="fixed inset-0 z-[80] flex items-center justify-center p-4"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <div className="absolute inset-0 bg-black/70" onClick={onClose} />
-      <motion.div
-        className="relative glass rounded-3xl p-8 max-w-md w-full"
-        initial={{ scale: 0.9, y: 20 }}
-        animate={{ scale: 1, y: 0 }}
-        exit={{ scale: 0.9, y: 20 }}
-      >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-gray-500 hover:text-white"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
-        <div className="flex items-center gap-4 mb-6">
-          <div
-            className="w-14 h-14 rounded-xl flex items-center justify-center"
-            style={{
-              background: "linear-gradient(135deg, rgba(255,42,31,0.2), rgba(255,90,47,0.1))",
-            }}
-          >
-            <span className="text-xl font-bold text-primary">
-              {client.logo}
-            </span>
-          </div>
-          <div>
-            <h3 className="text-xl font-bold">{client.name}</h3>
-            <p className="text-sm text-gray-400">{client.shortDescription}</p>
-          </div>
+const clients = [
+  {
+    id: "plugin",
+    name: "Plugin Agency",
+    logo: (
+      <svg viewBox="0 0 100 100" className="w-16 h-16" fill="none">
+        <circle cx="50" cy="50" r="44" stroke="#00FF41" strokeWidth="4" strokeDasharray="220 60" strokeLinecap="round"/>
+        <rect x="32" y="38" width="36" height="28" rx="4" stroke="#00FF41" strokeWidth="4"/>
+        <line x1="41" y1="66" x2="41" y2="76" stroke="#00FF41" strokeWidth="4" strokeLinecap="round"/>
+        <line x1="59" y1="66" x2="59" y2="76" stroke="#00FF41" strokeWidth="4" strokeLinecap="round"/>
+        <path d="M50 24 Q56 18 56 30" stroke="#00FF41" strokeWidth="4" strokeLinecap="round" fill="none"/>
+      </svg>
+    ),
+    bg: "rgba(0,255,65,0.05)",
+    border: "rgba(0,255,65,0.2)",
+  },
+  {
+    id: "fershman",
+    name: "The Fershman Journal",
+    logo: (
+      <div className="flex items-center gap-2">
+        <span style={{ fontFamily: "Georgia, serif", fontSize: "2.5rem", fontWeight: "bold", color: "#1a6b4a", lineHeight: 1 }}>F</span>
+        <div style={{ lineHeight: 1.2 }}>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.65rem", color: "#2d2d2d", fontWeight: "400" }}>The</div>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.65rem", color: "#2d2d2d", fontWeight: "700" }}>Fershman</div>
+          <div style={{ fontFamily: "Georgia, serif", fontSize: "0.65rem", color: "#2d2d2d", fontWeight: "700" }}>Journal</div>
         </div>
+      </div>
+    ),
+    bg: "rgba(245,240,230,0.08)",
+    border: "rgba(26,107,74,0.3)",
+  },
+  {
+    id: "next",
+    name: null,
+    logo: (
+      <div className="flex flex-col items-center gap-2">
+        <span className="text-3xl">✦</span>
+        <span className="text-xs text-gray-400 text-center px-2">You could be next</span>
+      </div>
+    ),
+    bg: "rgba(255,42,31,0.03)",
+    border: "rgba(255,42,31,0.15)",
+  },
+];
 
-        <div className="p-4 rounded-xl bg-white/5">
-          <p className="text-sm text-gray-300 leading-relaxed">
-            {client.result}
-          </p>
-        </div>
-      </motion.div>
-    </motion.div>
-  );
-}
+const duplicated = [...clients, ...clients, ...clients];
 
 export default function Clients() {
   const t = useTranslations("clients");
-  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
-
-  // Duplicate for infinite scroll effect
-  const duplicated = [...clients, ...clients];
 
   return (
     <section id="clients" className="py-24 overflow-hidden">
@@ -112,31 +68,29 @@ export default function Clients() {
         </motion.h2>
       </div>
 
-      {/* Infinite scroll */}
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-dark to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-dark to-transparent z-10 pointer-events-none" />
 
         <div className="flex animate-scroll-infinite w-max">
           {duplicated.map((client, i) => (
-            <ClientLogo
+            <div
               key={`${client.id}-${i}`}
-              client={client}
-              onClick={() => setSelectedClient(client)}
-            />
+              className="flex-shrink-0 w-36 h-36 mx-4 rounded-2xl flex flex-col items-center justify-center gap-2 select-none"
+              style={{
+                background: client.bg,
+                border: `1px solid ${client.border}`,
+                backdropFilter: "blur(8px)",
+              }}
+            >
+              {client.logo}
+              {client.name && (
+                <span className="text-xs text-gray-500 text-center px-2 mt-1">{client.name}</span>
+              )}
+            </div>
           ))}
         </div>
       </div>
-
-      {/* Modal */}
-      <AnimatePresence>
-        {selectedClient && (
-          <ClientModal
-            client={selectedClient}
-            onClose={() => setSelectedClient(null)}
-          />
-        )}
-      </AnimatePresence>
     </section>
   );
 }
